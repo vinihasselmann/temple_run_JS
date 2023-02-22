@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+
+}
+
+#character {
+    width: 80px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
+#block {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: relative;
+    top: 500px;
+    animation: none;
+}
+
+@keyframes slide {
+    0%{top: -100px};
+    1000%{top: 500px};
+}
+
+#white {
+    width: 500px;
+    height: 110px;
+    position: absolute;
+    top: 500px;
+    background-color: white;
+    z-index: 100;
+}
+
+#left, #right {
+    width: 50%;
+    position: absolute;
+    height: 500px;
+}
+
+#right {
+    left: 50%;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    z-index: 1000;
+}

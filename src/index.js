@@ -1,3 +1,5 @@
+
+
 // mover para esquerda
 function moveLeft() {
     let left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
@@ -21,11 +23,9 @@ document.addEventListener("keydown", e => {
     if(e.key==="ArrowRight") {moveRight();}
 });
 
-function startGame() {
+
     var block = document.getElementById("block");
     var counter = 0;
-
-    console.log("cabrito")
 
     block.style.animation = "slide 1s infinite;";
     
@@ -43,13 +43,13 @@ function startGame() {
         let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
         let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
         if(characterLeft == blockLeft && blockTop<500 && blockTop>300) {
-            console.log(`game over, score:${counter}`);
+            console.log(`game over, score:`+ counter);
             block.style.animation = "none";
         }
     }, 1);
     document.getElementById("left").addEventListener("touchstart", moveLeft);
     
     document.getElementById("right").addEventListener("touchstart", moveRight);
-}
+
 
 
